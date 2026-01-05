@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuraCast | Beyond the Forecast. Into the Decision.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .hero-gradient { background: radial-gradient(circle at top right, #1e3a8a, #000000, #000000); }
+        .card-hover { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .card-hover:hover { transform: translateY(-10px); background: rgba(255, 255, 255, 0.08); border-color: rgba(59, 130, 246, 0.5); }
+        .animate-pulse-slow { animation: pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 0.4; transform: scale(1); } 50% { opacity: 0.2; transform: scale(1.1); } }
+        .text-gradient { background: linear-gradient(to right, #fff, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #000; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #444; }
+    </style>
+</head>
+<body class="bg-black text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass py-4 px-6 flex justify-between items-center">
+        <div class="text-2xl font-bold tracking-tighter flex items-center">
+            <i class="fas fa-bolt-lightning text-blue-500 mr-2"></i> AuraCast
+        </div>
+        <div class="hidden md:flex space-x-8 text-sm font-medium">
+            <a href="#features" class="hover:text-blue-400 transition">Features</a>
+            <a href="#how-it-works" class="hover:text-blue-400 transition">How it Works</a>
+            <a href="#setup" class="hover:text-blue-400 transition">Get Started</a>
+        </div>
+        <a href="#setup" class="bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-full text-sm font-bold transition">Launch App</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative min-h-screen flex items-center justify-center overflow-hidden hero-gradient pt-20">
+        <div class="absolute inset-0 opacity-30">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600 rounded-full filter blur-[120px] animate-pulse-slow"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-600 rounded-full filter blur-[120px] animate-pulse-slow"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-6 max-w-4xl">
+            <h1 class="text-6xl md:text-8xl font-extrabold mb-6 tracking-tighter text-gradient">
+                AuraCast
+            </h1>
+            <p class="text-xl md:text-2xl text-blue-300 font-light mb-4">
+                Beyond the Forecast. Into the Decision.
+            </p>
+            <p class="text-lg md:text-xl text-gray-400 mb-10 leading-relaxed">
+                AuraCast transforms raw weather data into actionable intelligence. <br class="hidden md:block">
+                Stop reacting to weather. Start deciding with precision.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#setup" class="bg-white text-black px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-200 transition">Start Free Forever</a>
+                <a href="#features" class="glass px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition">Explore Solutions</a>
+            </div>
+            <div class="mt-16 text-sm text-gray-500 italic">
+                Made with ❤️ • Free for Everyone
+            </div>
+        </div>
+    </header>
+
+    <!-- Solutions Section -->
+    <section id="features" class="py-24 px-6 bg-zinc-950">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16">Tailored for Your Needs</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- For Farmers -->
+                <div class="glass p-8 rounded-3xl card-hover">
+                    <div class="w-14 h-14 bg-green-500/20 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-seedling text-green-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">For Farmers</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Protect your crops with precision. Get alerts for sudden rain, frost, or extreme heat to optimize irrigation and harvesting.
+                    </p>
+                </div>
+                <!-- For Drivers -->
+                <div class="glass p-8 rounded-3xl card-hover">
+                    <div class="w-14 h-14 bg-yellow-500/20 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-truck-delivery text-yellow-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">For Drivers</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Navigate safely. Receive real-time warnings about visibility, heavy rain, or storms on your route to ensure timely deliveries.
+                    </p>
+                </div>
+                <!-- For Companies -->
+                <div class="glass p-8 rounded-3xl card-hover">
+                    <div class="w-14 h-14 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-building text-blue-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">For Companies</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Operational resilience. Monitor weather impacts on logistics and outdoor operations with automated team alerts.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works -->
+    <section id="how-it-works" class="py-24 px-6 bg-black">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16">How AuraCast Works</h2>
+            <div class="space-y-8">
+                <div class="flex gap-6 items-start">
+                    <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 font-bold">1</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Register Your Location</h3>
+                        <p class="text-gray-400">Enter your coordinates and Telegram bot details. Your data is processed instantly.</p>
+                    </div>
+                </div>
+                <div class="flex gap-6 items-start">
+                    <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 font-bold">2</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Continuous Monitoring</h3>
+                        <p class="text-gray-400">Our system checks weather every 30 minutes automatically, even when you're offline.</p>
+                    </div>
+                </div>
+                <div class="flex gap-6 items-start">
+                    <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 font-bold">3</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Smart Alerts</h3>
+                        <p class="text-gray-400">Receive intelligent notifications with actionable advice based on weather changes.</p>
+                    </div>
+                </div>
+                <div class="flex gap-6 items-start">
+                    <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 font-bold">4</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Make Better Decisions</h3>
+                        <p class="text-gray-400">Act on real-time intelligence, not just forecasts. Optimize your operations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Telegram Setup Guide -->
+    <section class="py-24 px-6 bg-zinc-950">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-4">Setup Your Telegram Bot</h2>
+            <p class="text-center text-gray-400 mb-16">Follow these simple steps to connect AuraCast to your Telegram account</p>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Step 1 -->
+                <div class="glass p-8 rounded-2xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center font-bold mr-4">1</div>
+                        <h3 class="text-2xl font-bold">Open Telegram</h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">Search for <span class="font-mono bg-white/10 px-2 py-1 rounded">@BotFather</span> in Telegram</p>
+                    <div class="bg-black/50 p-4 rounded-lg border border-white/10">
+                        <p class="text-sm text-gray-300">💡 <strong>Tip:</strong> BotFather is Telegram's official bot for creating new bots</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="glass p-8 rounded-2xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center font-bold mr-4">2</div>
+                        <h3 class="text-2xl font-bold">Create New Bot</h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">Send <span class="font-mono bg-white/10 px-2 py-1 rounded">/newbot</span> to BotFather</p>
+                    <div class="bg-black/50 p-4 rounded-lg border border-white/10">
+                        <p class="text-sm text-gray-300">Follow the prompts to name your bot (e.g., "MyWeatherBot")</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="glass p-8 rounded-2xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center font-bold mr-4">3</div>
+                        <h3 class="text-2xl font-bold">Copy Bot Token</h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">BotFather will give you a <strong>Bot Token</strong></p>
+                    <div class="bg-black/50 p-4 rounded-lg border border-white/10">
+                        <p class="text-sm text-gray-300 font-mono">123456789:ABCdefGHIjklmnoPQRstuvWXYZ</p>
+                        <p class="text-xs text-gray-500 mt-2">⚠️ Keep this secret! Don't share it with anyone</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="glass p-8 rounded-2xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center font-bold mr-4">4</div>
+                        <h3 class="text-2xl font-bold">Send Test Message</h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">Send any message to your new bot</p>
+                    <div class="bg-black/50 p-4 rounded-lg border border-white/10">
+                        <p class="text-sm text-gray-300">This activates the bot and allows us to find your Chat ID</p>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="glass p-8 rounded-2xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center font-bold mr-4">5</div>
+                        <h3 class="text-2xl font-bold">Get Chat ID</h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">Visit this URL in your browser:</p>
+                    <div class="bg-black/50 p-4 rounded-lg border border-white/10 overflow-x-auto">
+                        <p class="text-xs text-gray-300 font-mono whitespace-nowrap">https://api.telegram.org/bot<span class="text-blue-400">&lt;YOUR_BOT_TOKEN&gt;</span>/getUpdates</p>
+                    </div>
+                </div>
+
+                <!-- Step 6 -->
+                <div class="glass p-8 rounded-2xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center font-bold mr-4">6</div>
+                        <h3 class="text-2xl font-bold">Copy Chat ID</h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">Look for <span class="font-mono bg-white/10 px-2 py-1 rounded">"id": 123456789</span></p>
+                    <div class="bg-black/50 p-4 rounded-lg border border-white/10">
+                        <p class="text-sm text-gray-300">That number is your Chat ID</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- How It Works Diagram -->
+            <div class="mt-20 glass p-12 rounded-3xl">
+                <h3 class="text-2xl font-bold mb-8 text-center">How Your Alerts Reach You</h3>
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-cloud text-green-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-1">Weather Data</h4>
+                            <p class="text-gray-400 text-sm">Open-Meteo API fetches real-time weather data for your location</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-robot text-blue-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-1">Smart Processing</h4>
+                            <p class="text-gray-400 text-sm">AuraCast analyzes weather and generates smart alerts based on your role</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-paper-plane text-purple-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-1">Telegram Delivery</h4>
+                            <p class="text-gray-400 text-sm">Your bot sends the alert directly to your Telegram chat</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-yellow-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-bell text-yellow-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-1">You Get Notified</h4>
+                            <p class="text-gray-400 text-sm">Receive instant notifications with actionable advice every 30 minutes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Features -->
+            <div class="mt-16 grid md:grid-cols-3 gap-6">
+                <div class="glass p-6 rounded-2xl text-center">
+                    <i class="fas fa-lock text-2xl text-blue-500 mb-4"></i>
+                    <h4 class="font-bold mb-2">Your Data is Safe</h4>
+                    <p class="text-sm text-gray-400">Your bot token and chat ID are only stored in your GitHub repository</p>
+                </div>
+                <div class="glass p-6 rounded-2xl text-center">
+                    <i class="fas fa-infinity text-2xl text-green-500 mb-4"></i>
+                    <h4 class="font-bold mb-2">Always Running</h4>
+                    <p class="text-sm text-gray-400">GitHub Actions runs your bot 24/7, even when your computer is off</p>
+                </div>
+                <div class="glass p-6 rounded-2xl text-center">
+                    <i class="fas fa-dollar-sign text-2xl text-purple-500 mb-4"></i>
+                    <h4 class="font-bold mb-2">100% Free</h4>
+                    <p class="text-sm text-gray-400">No hidden fees, no subscriptions. Free forever for everyone</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Setup Section -->
+    <section id="setup" class="py-24 px-6 bg-zinc-950">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Configure Your Alerts</h2>
+                <p class="text-gray-400">Connect your Telegram and location to start receiving intelligence.</p>
+            </div>
+
+            <div class="glass p-8 md:p-12 rounded-[2rem]">
+                <form id="configForm" class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-semibold mb-2 text-gray-300">Telegram Bot Token</label>
+                        <input type="text" id="botToken" placeholder="123456789:ABCdef..." class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-blue-500 transition" required>
+                        <p class="text-xs text-gray-500 mt-1">Get this from @BotFather on Telegram.</p>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold mb-2 text-gray-300">Telegram Chat ID</label>
+                        <input type="text" id="chatId" placeholder="987654321" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-blue-500 transition" required>
+                        <p class="text-xs text-gray-500 mt-1">Send a message to your bot and check /getUpdates or use @userinfobot.</p>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-semibold mb-2 text-gray-300">Latitude</label>
+                            <input type="number" step="any" id="lat" placeholder="52.52" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-blue-500 transition" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-2 text-gray-300">Longitude</label>
+                            <input type="number" step="any" id="lng" placeholder="13.41" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-blue-500 transition" required>
+                        </div>
+                    </div>
+                    <button type="button" onclick="getLocation()" class="text-sm text-blue-400 hover:text-blue-300 transition">
+                        <i class="fas fa-location-crosshairs mr-1"></i> Use My Current Location
+                    </button>
+                    
+                    <div class="pt-4">
+                        <button type="submit" id="submitBtn" class="w-full bg-blue-600 hover:bg-blue-700 py-4 rounded-xl font-bold text-lg transition flex items-center justify-center">
+                            Activate AuraCast Intelligence
+                        </button>
+                    </div>
+                </form>
+
+                <div id="status" class="mt-6 hidden p-6 rounded-2xl text-center font-medium border border-white/10"></div>
+                
+                <div class="mt-10 pt-10 border-t border-white/10">
+                    <h4 class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-4">Live Weather Preview</h4>
+                    <div id="weatherPreview" class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="bg-white/5 p-4 rounded-2xl text-center">
+                            <div class="text-xs text-gray-500 mb-1">Temperature</div>
+                            <div id="p-temp" class="text-xl font-bold">--°C</div>
+                        </div>
+                        <div class="bg-white/5 p-4 rounded-2xl text-center">
+                            <div class="text-xs text-gray-500 mb-1">Condition</div>
+                            <div id="p-cond" class="text-sm font-bold">--</div>
+                        </div>
+                        <div class="bg-white/5 p-4 rounded-2xl text-center">
+                            <div class="text-xs text-gray-500 mb-1">Humidity</div>
+                            <div id="p-hum" class="text-xl font-bold">--%</div>
+                        </div>
+                        <div class="bg-white/5 p-4 rounded-2xl text-center">
+                            <div class="text-xs text-gray-500 mb-1">Wind Speed</div>
+                            <div id="p-wind" class="text-xl font-bold">-- km/h</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-white/10 text-center">
+        <div class="text-xl font-bold mb-4">AuraCast</div>
+        <p class="text-gray-500 text-sm mb-6">
+            Always free, always available.
+			Email : contact.auracast@gmail.com
+        </p>
+      
+    </footer>
+
+    <script>
+        const form = document.getElementById('configForm');
+        const statusDiv = document.getElementById('status');
+        const submitBtn = document.getElementById('submitBtn');
+
+        async function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(async (position) => {
+                    const lat = position.coords.latitude.toFixed(4);
+                    const lng = position.coords.longitude.toFixed(4);
+                    document.getElementById('lat').value = lat;
+                    document.getElementById('lng').value = lng;
+                    updatePreview(lat, lng);
+                }, (error) => {
+                    alert("Error getting location: " + error.message);
+                });
+            } else {
+                alert("Geolocation is not supported by this browser.");
+            }
+        }
+
+        async function updatePreview(lat, lng) {
+            const weather = await fetchWeather(lat, lng);
+            if (weather && weather.current) {
+                document.getElementById('p-temp').innerText = `${weather.current.temperature_2m}°C`;
+                document.getElementById('p-cond').innerText = getWeatherDescription(weather.current.weather_code);
+                document.getElementById('p-hum').innerText = `${weather.current.relative_humidity_2m}%`;
+                document.getElementById('p-wind').innerText = `${weather.current.wind_speed_10m} km/h`;
+            }
+        }
+
+        document.getElementById('lat').addEventListener('change', (e) => updatePreview(e.target.value, document.getElementById('lng').value));
+        document.getElementById('lng').addEventListener('change', (e) => updatePreview(document.getElementById('lat').value, e.target.value));
+
+        async function sendTelegramMessage(token, chatId, text) {
+            const url = `https://api.telegram.org/bot${token}/sendMessage`;
+            try {
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        chat_id: chatId,
+                        text: text,
+                        parse_mode: 'Markdown'
+                    })
+                });
+                return await response.json();
+            } catch (e) {
+                console.error("Telegram Error:", e);
+                return { ok: false };
+            }
+        }
+
+        async function fetchWeather(lat, lng) {
+            const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lng}&current=temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m&hourly=precipitation_probability,rain&timezone=auto`;
+            try {
+                const response = await fetch(url);
+                return await response.json();
+            } catch (e) {
+                console.error("Weather Error:", e);
+                return null;
+            }
+        }
+
+        function getWeatherDescription(code) {
+            const codes = {
+                0: "Clear sky ☀️",
+                1: "Mainly clear 🌤️", 2: "Partly cloudy ⛅", 3: "Overcast ☁️",
+                45: "Foggy 🌫️", 48: "Depositing rime fog 🌫️",
+                51: "Light drizzle 🌧️", 53: "Moderate drizzle 🌧️", 55: "Dense drizzle 🌧️",
+                61: "Slight rain 🌦️", 63: "Moderate rain 🌧️", 65: "Heavy rain ⛈️",
+                71: "Slight snow ❄️", 73: "Moderate snow ❄️", 75: "Heavy snow ❄️",
+                95: "Thunderstorm 🌩️", 96: "Thunderstorm with hail ⛈️"
+            };
+            return codes[code] || "Unknown Weather";
+        }
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const token = document.getElementById('botToken').value;
+            const chatId = document.getElementById('chatId').value;
+            const lat = document.getElementById('lat').value;
+            const lng = document.getElementById('lng').value;
+
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner animate-spin mr-2"></i> Initializing...';
+            
+            statusDiv.className = "mt-6 p-4 rounded-xl text-center font-medium bg-blue-500/20 text-blue-400 block";
+            statusDiv.innerText = "Fetching current intelligence...";
+
+            const weather = await fetchWeather(lat, lng);
+            
+            if (weather && weather.current) {
+                const current = weather.current;
+                const desc = getWeatherDescription(current.weather_code);
+                const temp = current.temperature_2m;
+                const wind = current.wind_speed_10m;
+                
+                let advice = "";
+                if (current.weather_code >= 61) advice = "⚠️ *Warning:* Rain detected. Farmers: Protect crops. Drivers: Reduce speed.";
+                else if (current.weather_code >= 95) advice = "🚨 *Alert:* Thunderstorm active. Seek shelter immediately.";
+                else if (temp > 35) advice = "🔥 *Heat Alert:* High temperatures. Ensure hydration and crop cooling.";
+                else advice = "✅ Conditions are stable for operations.";
+
+                const message = `🚀 *AuraCast Activated*\n\n📍 Location: ${lat}, ${lng}\n🌡️ Temp: ${temp}°C\n☁️ Status: ${desc}\n💨 Wind: ${wind} km/h\n\n${advice}\n\n_Monitoring every 30 mins..._`;
+                
+                const tgResult = await sendTelegramMessage(token, chatId, message);
+                
+                if (tgResult.ok) {
+                    statusDiv.className = "mt-6 p-4 rounded-xl text-center font-medium bg-green-500/20 text-green-400 block";
+                    statusDiv.innerHTML = '<i class="fas fa-check-circle mr-2"></i> Success! Check your Telegram. Monitoring active.';
+                } else {
+                    statusDiv.className = "mt-6 p-4 rounded-xl text-center font-medium bg-red-500/20 text-red-400 block";
+                    statusDiv.innerText = "Error: Could not send Telegram message. Check Token/Chat ID.";
+                }
+            } else {
+                statusDiv.className = "mt-6 p-4 rounded-xl text-center font-medium bg-red-500/20 text-red-400 block";
+                statusDiv.innerText = "Error: Could not fetch weather data.";
+            }
+
+            submitBtn.disabled = false;
+            submitBtn.innerText = "Activate AuraCast Intelligence";
+        });
+    </script>
+</body>
+</html>
