@@ -1,10 +1,10 @@
 [
   {
-    "bot_token": "YOUR_BOT_TOKEN_HERE",
-    "chat_id": "YOUR_CHAT_ID_HERE",
-    "lat": 52.52,
-    "lng": 13.41,
+    "bot_token": "8290881421:AAFfR0j6fxo7xw3_L49mslxdpTDWiV8st58",
+    "chat_id": 317570402,
+    "lat": 33.3717,
+    "lng": 44.3757,
     "type": "farmer",
-    "name": "Example User"
+    "name": "Rami Ibrahim"
   }
 ]
